@@ -1,0 +1,36 @@
+package ass;
+
+
+//Superclass
+class SmartDevice {
+ public void turnOn() {
+     System.out.println("Smart device is now ON.");
+ }
+
+ public void turnOff() {
+     System.out.println("Smart device is now OFF.");
+ }
+}
+
+//Subclass
+class SmartLight extends SmartDevice {
+ @Override
+ public void turnOn() {
+     System.out.println("SmartLight is glowing! 💡");
+ }
+
+ @Override
+ public void turnOff() {
+     System.out.println("SmartLight is turned off. 🌙");
+ }
+}
+
+//Main class
+public class Sfv {
+ public static void main(String[] args) {
+     SmartLight light = new SmartLight();
+     
+     light.turnOn();   // Calls overridden method in SmartLight
+     light.turnOff();  // Calls overridden method in SmartLight
+ }
+}
